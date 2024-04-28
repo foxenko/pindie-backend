@@ -21,6 +21,14 @@ const gameSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  categories: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: categories,
+  }],
+  users: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: users,
+  }],
 });
 
 module.exports = mongoose.model("game", gameSchema);
