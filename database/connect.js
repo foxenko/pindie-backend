@@ -11,4 +11,4 @@ const connectToDatabase = async () => {
 
 };
 
-moduke.exports = connectToDatabase;
+module.exports = connectToDatabase;
