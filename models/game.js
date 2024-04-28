@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 
 const gameSchema = new mongoose.Schema({
   title: {
-    // Поле со строковым значением
     type: String,
-    // Явно указываем, что поле обязательно при записи в базу нового документа
     required: true,
   },
   description: {

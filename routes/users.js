@@ -1,8 +1,8 @@
 const usersRouter = require("express").Router();
 
-const findAllUser = require("../middlewares/users");
+const findAllUsers = require("../middlewares/users");
 const sendAllUsers = require("../controllers/users");
 
-usersRouter.get("/games", findAllCategories, sendAllCategories);
+usersRouter.get("/games", findAllUsers, sendAllUsers);
 
 module.exports = usersRouter;
