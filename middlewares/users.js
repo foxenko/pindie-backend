@@ -32,7 +32,14 @@ const createUser = async (req, res, next) => {
   }
 };
 
-//! UPD
+const updateUser = async (req, res, next) => {
+  try {
+    req.guser = await user.findByIdAndUpdate(req.params.id, req.body);
+    next();
+  } catch (error) {
+    res.status(400).send({ message: "Ошибка обновления пользователя" });
+  }
+};
 
 const deleteUser = async (req, res, next) => {
   console.log("DELETE /users/:id");
@@ -47,4 +54,10 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
-module.exports = { findAllUsers, findUserById, createUser, deleteUser };
+module.exports = {
+  findAllUsers,
+  findUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+};

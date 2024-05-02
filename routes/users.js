@@ -4,6 +4,7 @@ const {
   findUserById,
   createUser,
   deleteUser,
+  updateUser,
 } = require("../middlewares/users");
 const {
   sendAllUsers,
