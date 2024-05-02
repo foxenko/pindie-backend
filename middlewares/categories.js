@@ -1,4 +1,4 @@
-const categories = require("../models/category");
+const categories = require("../models/categories");
 
 const findAllCategories = async (req, res, next) => {
   req.categoriesArray = await categories.find({});
