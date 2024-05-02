@@ -29,4 +29,22 @@ const createCategory = async (req, res, next) => {
   }
 };
 
-module.exports = { findAllCategories, findCategoryById, createCategory };
+const deleteCategory = async (req, res, next) => {
+  console.log("DELETE /categories/:id");
+  try {
+    req.category = await categories.findByIdAndDelete(req.params.id);
+    next();
+  } catch (error) {
+    res.setHeader("Content-Type", "application/json");
+    res
+      .status(400)
+      .send(JSON.stringify({ message: "Ошибка удаления категории" }));
+  }
+};
+
+module.exports = {
+  findAllCategories,
+  findCategoryById,
+  createCategory,
+  deleteCategory,
+};
