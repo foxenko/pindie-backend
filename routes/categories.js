@@ -4,6 +4,7 @@ const {
   findCategoryById,
   createCategory,
   deleteCategory,
+  updateCategory,
 } = require("../middlewares/categories");
 const {
   sendAllCategories,
