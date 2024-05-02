@@ -11,6 +11,7 @@ const {
   sendCategoryById,
   sendCategoryCreated,
   sendCategoryDeleted,
+  sendCategoryUpdated,
 } = require("../controllers/categories");
 
 categoriesRouter.get("/categories", findAllCategories, sendAllCategories);
