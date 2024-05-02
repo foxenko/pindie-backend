@@ -27,5 +27,6 @@ module.exports = {
   sendAllUsers,
   sendUserById,
   sendUserCreated,
+  sendUserUpdated,
   sendUserDeleted,
 };

@@ -11,6 +11,7 @@ const {
   sendUserById,
   sendUserCreated,
   sendUserDeleted,
+  sendUserUpdated,
 } = require("../controllers/users");
 
 usersRouter.get("/users", findAllUsers, sendAllUsers);
