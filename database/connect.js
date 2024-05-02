@@ -4,7 +4,8 @@ const DB_URL = "mongodb://localhost:27017/pindie";
 
 const connectToDatabase = async () => {
   try {
-    await mongoose.connect;
+    await mongoose.connect(DB_URL);
+    console.log("Successfully connected to DB");
   } catch (error) {
     console.log(`DB connection error ${error}`);
   }
