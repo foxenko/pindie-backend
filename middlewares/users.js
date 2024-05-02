@@ -33,16 +33,20 @@ const createUser = async (req, res, next) => {
 };
 
 const updateUser = async (req, res, next) => {
+  console.log("UPDATE /users/:id");
   try {
-    req.guser = await user.findByIdAndUpdate(req.params.id, req.body);
-    next();
+    if (req.body) {
+      req.user = await user.findByIdAndUpdate(req.params.id, req.body);
+      next();
+    } else {
+      res.status(400).send({ message: "Ошибка обновления пользователя" });
+    }
   } catch (error) {
     res.status(400).send({ message: "Ошибка обновления пользователя" });
   }
 };
 
 const deleteUser = async (req, res, next) => {
-  console.log("DELETE /users/:id");
   try {
     req.user = await users.findByIdAndDelete(req.params.id);
     next();
