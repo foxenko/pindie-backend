@@ -5,5 +5,6 @@ const { sendGameById } = require("../controllers/games");
 
 gamesRouter.get("/games", findAllGames, sendAllGames);
 gamesRouter.get("/games/:id", findGameById, sendGameById);
+gamesRouter.post("/games", findAllGames, createGame, sendGameCreated);
 
 module.exports = gamesRouter;
