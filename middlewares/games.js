@@ -28,7 +28,16 @@ const createGame = async (req, res, next) => {
   }
 };
 
-module.exports = { findAllGames, findGameById, createGame };
+const deleteGame = async (req, res, next) => {
+  try {
+    req.game = await games.findByIdAndDelete(req.params.id);
+    next();
+  } catch (error) {
+    res.status(400).send({ message: "Error deleting game" });
+  }
+};
+
+module.exports = { findAllGames, findGameById, createGame, deleteGame };
 
 // const findAllGames = async (req, res, next) => {
 //   req.gamesArray = await games.find({});
