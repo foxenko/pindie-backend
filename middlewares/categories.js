@@ -29,6 +29,15 @@ const createCategory = async (req, res, next) => {
   }
 };
 
+const updateCategory = async (req, res, next) => {
+  try {
+    req.category = await categories.findByIdAndUpdate(req.params.id, req.body);
+    next();
+  } catch (error) {
+    res.status(400).send({ message: "Ошибка обновления категории" });
+  }
+};
+
 const deleteCategory = async (req, res, next) => {
   console.log("DELETE /categories/:id");
   try {
@@ -46,5 +55,6 @@ module.exports = {
   findAllCategories,
   findCategoryById,
   createCategory,
+  updateCategory,
   deleteCategory,
 };
