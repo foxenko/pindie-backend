@@ -28,6 +28,15 @@ const createGame = async (req, res, next) => {
   }
 };
 
+const updateGame = async (req, res, next) => {
+  try {
+    req.game = await games.findByIdAndUpdate(req.params.id, req.body);
+    next();
+  } catch (error) {
+    res.status(400).send({ message: "Ошибка обновления игры" });
+  }
+};
+
 const deleteGame = async (req, res, next) => {
   try {
     req.game = await games.findByIdAndDelete(req.params.id);
@@ -37,7 +46,13 @@ const deleteGame = async (req, res, next) => {
   }
 };
 
-module.exports = { findAllGames, findGameById, createGame, deleteGame };
+module.exports = {
+  findAllGames,
+  findGameById,
+  createGame,
+  updateGame,
+  deleteGame,
+};
 
 // const findAllGames = async (req, res, next) => {
 //   req.gamesArray = await games.find({});
