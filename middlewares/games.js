@@ -4,3 +4,12 @@ const findAllGames = async (req, res, next) => {
 };
 
 module.exports = findAllGames;
+
+// const games = require("../models/games");
+// const findAllGames = async (req, res, next) => {
+//   req.gamesArray = await games
+//     .find({})
+//     .populate("categories")
+//     .populate("users");
+//   next();
+// };
