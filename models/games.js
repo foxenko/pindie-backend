@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const categories = require('./categories');
-const users = require('./users');
+const categories = require("./categories");
+const users = require("./users");
 
 const gameSchema = new mongoose.Schema({
   title: {
@@ -23,14 +23,18 @@ const gameSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  categories: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: categories,
-  }],
-  users: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: users,
-  }],
+  categories: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: categories,
+    },
+  ],
+  users: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: users,
+    },
+  ],
 });
 
 module.exports = mongoose.model("games", gameSchema);
