@@ -1,4 +1,3 @@
-// Импортируем модель
 const users = require("../models/user");
 
 const findAllUsers = async (req, res, next) => {
