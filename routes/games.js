@@ -1,6 +1,10 @@
 const gamesRouter = require("express").Router();
-const { findAllGames, findGameById } = require("../middlewares/games");
-const { sendAllGames } = require("../controllers/games");
+const {
+  findAllGames,
+  findGameById,
+  createGame,
+} = require("../middlewares/games");
+const { sendAllGames, sendGameCreated } = require("../controllers/games");
 const { sendGameById } = require("../controllers/games");
 
 gamesRouter.get("/games", findAllGames, sendAllGames);

@@ -2,10 +2,12 @@ const categoriesRouter = require("express").Router();
 const {
   findAllCategories,
   findCategoryById,
+  createCategory,
 } = require("../middlewares/categories");
 const {
   sendAllCategories,
   sendCategoryById,
+  sendCategoryCreated,
 } = require("../controllers/categories");
 
 categoriesRouter.get("/categories", findAllCategories, sendAllCategories);
