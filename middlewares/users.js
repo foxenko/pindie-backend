@@ -32,4 +32,19 @@ const createUser = async (req, res, next) => {
   }
 };
 
-module.exports = { findAllUsers, findUserById, createUser };
+//! UPD
+
+const deleteUser = async (req, res, next) => {
+  console.log("DELETE /users/:id");
+  try {
+    req.user = await users.findByIdAndDelete(req.params.id);
+    next();
+  } catch (error) {
+    res.setHeader("Content-Type", "application/json");
+    res
+      .status(400)
+      .send(JSON.stringify({ message: "Ошибка удаления пользователя" }));
+  }
+};
+
+module.exports = { findAllUsers, findUserById, createUser, deleteUser };
