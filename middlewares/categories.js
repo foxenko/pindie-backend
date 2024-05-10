@@ -30,11 +30,15 @@ const createCategory = async (req, res, next) => {
 };
 
 const updateCategory = async (req, res, next) => {
+  console.log(`PUT /categories/${req.params.id}`);
   try {
     req.category = await categories.findByIdAndUpdate(req.params.id, req.body);
     next();
   } catch (error) {
-    res.status(400).send({ message: "Ошибка обновления категории" });
+    res.setHeader("Content-Type", "application/json");
+    res
+      .status(400)
+      .send(JSON.stringify({ message: "Ошибка обновления категории" }));
   }
 };
 
@@ -48,6 +52,21 @@ const deleteCategory = async (req, res, next) => {
     res
       .status(400)
       .send(JSON.stringify({ message: "Ошибка удаления категории" }));
+  }
+};
+
+const checkEmptyFields = async (req, res, next) => {
+  if (
+    !req.body.title ||
+    !req.body.description ||
+    !req.body.image ||
+    !req.body.link ||
+    !req.body.developer
+  ) {
+    res.setHeader("Content-Type", "application/json");
+    res.status(400).send(JSON.stringify({ message: "Заполните все поля" }));
+  } else {
+    next();
   }
 };
 
