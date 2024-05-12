@@ -17,10 +17,13 @@ const {
   sendUserCreated,
   sendUserDeleted,
   sendUserUpdated,
+  sendMe,
 } = require("../controllers/users");
+const { checkAuth } = require("../middlewares/auth");
 
 usersRouter.get("/users", findAllUsers, sendAllUsers);
 usersRouter.get("/users/:id", findUserById, sendUserById);
+usersRouter.get("/me", checkAuth, sendMe);
 usersRouter.post(
   "/users",
   findAllUsers,
