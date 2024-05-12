@@ -1,4 +1,5 @@
 const usersRouter = require("express").Router();
+
 const {
   findAllUsers,
   findUserById,
@@ -8,6 +9,7 @@ const {
   checkIsUserExists,
   checkEmptyNameAndEmailAndPassword,
   checkEmptyNameAndEmail,
+  hashPassword,
 } = require("../middlewares/users");
 const {
   sendAllUsers,
@@ -24,6 +26,7 @@ usersRouter.post(
   findAllUsers,
   checkIsUserExists,
   checkEmptyNameAndEmailAndPassword,
+  hashPassword,
   createUser,
   sendUserCreated
 );
