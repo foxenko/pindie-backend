@@ -1,10 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 
-const apiRouter = require("./routes/api");
-
+const { apiRouter } = require("./routes/api");
 const connectToDatabase = require("./database/connect");
+const { pagesRouter } = require("./routes/pages");
 
 // const cors = require('./middlewares/cors');
 
@@ -15,7 +16,9 @@ connectToDatabase();
 
 app.use(
   // cors,
+  cookieParser(),
   bodyParser.json(),
+  pagesRouter,
   apiRouter,
   express.static(path.join(__dirname, "public"))
 );
