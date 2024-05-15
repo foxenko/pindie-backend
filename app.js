@@ -1,12 +1,11 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const path = require("path");
+const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
-const apiRouter = require("./routes/api");
 const connectToDatabase = require("./database/connect");
+const apiRouter = require("./routes/api");
 const pagesRouter = require("./routes/pages");
-
 // const cors = require('./middlewares/cors');
 
 const app = express();
