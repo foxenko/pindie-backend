@@ -10,4 +10,4 @@ apiRouter.use("/api", usersRouter);
 apiRouter.use("/api", categoriesRouter);
 apiRouter.use("/api", authRouter);
 
-module.exports = { apiRouter };
+module.exports = apiRouter;
