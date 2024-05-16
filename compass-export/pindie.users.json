@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "662a89d242f2c8b827c320ff"
+  },
+  "username": "user",
+  "email": "test@example.com",
+  "password": "password"
+},
+{
+  "_id": {
+    "$oid": "662bae2b0f791cda27b5bbb7"
+  },
+  "username": "aski",
+  "email": "aski@example.com",
+  "password": "ilovehtml"
+},
+{
+  "_id": {
+    "$oid": "662e80b8909d8c33fcd35fad"
+  },
+  "username": "ilya",
+  "email": "ilya@example.com",
+  "password": "qwerty1234"
+},
+{
+  "_id": {
+    "$oid": "663e05cc88cb4334803f8c23"
+  },
+  "username": "cssochka",
+  "email": "cssochka@example.com",
+  "password": "ilovecss",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663e05d688cb4334803f8c27"
+  },
+  "username": "jav-jav",
+  "email": "jav-jav@example.com",
+  "password": "ilovejs",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663e062388cb4334803f8c2e"
+  },
+  "username": "admin",
+  "email": "admin@example.com",
+  "password": "admin123!",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6640ee0ba58465017c013bea"
+  },
+  "username": "usn",
+  "email": "email@gmail.com",
+  "password": "password",
+  "__v": 0
+}]
