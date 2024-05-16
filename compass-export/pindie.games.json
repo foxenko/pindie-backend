@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "662a8ab442f2c8b827c32110"
+  },
+  "id": 1,
+  "title": "Crystal Keeper",
+  "description": "Управляй боевым дроном, чтобы любой ценой защитить кристалл от враждебных космослизней.",
+  "image": "https://code.s3.yandex.net/teens/pindie-games/cristal-keeper/cover.png",
+  "link": "https://code.s3.yandex.net/teens/pindie-games/cristal-keeper/game/index.html"
+},
+{
+  "_id": {
+    "$oid": "662a8ab442f2c8b827c32111"
+  },
+  "id": 2,
+  "title": "Dangeons'n'Caves. Prologue",
+  "description": "Безымянный герой исследует пещеры и подземелья, чтобы найти больше информации о себе.",
+  "image": "https://code.s3.yandex.net/teens/pindie-games/dangeons-n-caves-prologue/cover.png",
+  "link": "https://code.s3.yandex.net/teens/pindie-games/dangeons-n-caves-prologue/game/index.html"
+},
+{
+  "_id": {
+    "$oid": "662a8ab442f2c8b827c32112"
+  },
+  "id": 4,
+  "title": "test1",
+  "image": "https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-blue-stock-official-1920x1080-5630.jpg",
+  "link": "https://ya.ru",
+  "description": "test1"
+},
+{
+  "_id": {
+    "$oid": "662a8ab442f2c8b827c32113"
+  },
+  "id": 5,
+  "title": "test2",
+  "image": "https://wp-seven.ru/wp-content/uploads/2018/11/L07BzKR.jpg",
+  "link": "https://ya.ru",
+  "description": "test2"
+},
+{
+  "_id": {
+    "$oid": "662a8ab442f2c8b827c32114"
+  },
+  "id": 6,
+  "title": "test3",
+  "image": "https://img1.akspic.ru/attachments/originals/6/8/5/3/5/153586-windows-windows_10-windows_8_1-microsoft_windows-rtm-1920x1200.jpg",
+  "link": "https://ya.ru",
+  "description": "test3"
+},
+{
+  "_id": {
+    "$oid": "663368951d721ea534d1baec"
+  },
+  "title": "G.U.N.N.E.R.",
+  "description": "Продержись как можно дольше, отбиваясь от врагов, которых будет становиться всё больше.",
+  "developer": "CoolDeveloper",
+  "image": "https://code.s3.yandex.net/teens/pindie-games/gunner/cover.png",
+  "link": "https://code.s3.yandex.net/teens/pindie-games/gunner/game/index.html"
+}]
