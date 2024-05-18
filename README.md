@@ -1,1 +1,1 @@
-# pindie_back
+# PINDIE backend
