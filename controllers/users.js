@@ -15,7 +15,7 @@ const sendUserCreated = (req, res) => {
 
 const sendUserUpdated = (req, res) => {
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify(req.user));
+  res.end(JSON.stringify({ message: "Пользователь обновлён" }));
 };
 
 const sendUserDeleted = (req, res) => {
