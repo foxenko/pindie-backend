@@ -22,7 +22,7 @@ const { checkAuth } = require("../middlewares/auth");
 const usersRouter = require("express").Router();
 
 usersRouter.get("/users", findAllUsers, sendAllUsers);
-usersRouter.get("/users/:id", findUserById, sendUserById);
+usersRouter.get("/users/:id", findAllUsers, findUserById, sendUserById);
 usersRouter.get("/me", checkAuth, sendMe);
 usersRouter.post(
   "/users",
