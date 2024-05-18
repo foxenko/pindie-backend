@@ -52,4 +52,26 @@ gameSchema.statics.findGameByCategory = function (category) {
     });
 };
 
+gameSchema.statics.vote = async function (game, user) {
+  try {
+    const userExists = game.users.some((targetUser) =>
+      targetUser._id.equals(user._id)
+    );
+
+    if (!userExists) {
+      game.users.push(user._id);
+      await game.save();
+      return {
+        success: true,
+      };
+    } else {
+      return { success: true };
+    }
+  } catch {
+    return {
+      success: false,
+    };
+  }
+};
+
 module.exports = mongoose.model("games", gameSchema);
