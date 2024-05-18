@@ -19,12 +19,7 @@ const { checkAuth } = require("../middlewares/auth");
 const categoriesRouter = require("express").Router();
 
 categoriesRouter.get("/categories", findAllCategories, sendAllCategories);
-categoriesRouter.get(
-  "/categories/:id",
-  findAllCategories,
-  findCategoryById,
-  sendCategoryById
-);
+categoriesRouter.get("/categories/:id", findCategoryById, sendCategoryById);
 categoriesRouter.post(
   "/categories",
   findAllCategories,
