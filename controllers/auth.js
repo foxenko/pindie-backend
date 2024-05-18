@@ -12,11 +12,12 @@ const login = (res, req) => {
       });
       return { user, token };
     })
-    .then((user) => {
+    .then(({ user, token }) => {
       res.status(200).send({
         _id: user._id,
         username: user.username,
         email: user.email,
+        admin: user.admin,
         jwt: token,
       });
     })
