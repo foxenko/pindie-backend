@@ -2,27 +2,23 @@ const users = require("../models/users");
 const jwt = require("jsonwebtoken");
 const path = require("path");
 
-const login = (res, req) => {
+const login = (req, res) => {
   const { email, password } = req.body;
   users
     .findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign(email, "group-twenty-six", {
+      const token = jwt.sign({ _id: user._id }, "group-twenty-six", {
         expiresIn: 3600,
       });
-      return { user, token };
-    })
-    .then(({ user, token }) => {
       res.status(200).send({
         _id: user._id,
         username: user.username,
         email: user.email,
-        admin: user.admin,
         jwt: token,
       });
     })
     .catch((error) => {
-      res.status(401).send({ message: error.message });
+      res.status(401).send(JSON.stringify({ message: error.message }));
     });
 };
 
