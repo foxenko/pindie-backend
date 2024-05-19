@@ -99,15 +99,20 @@ const checkIfUsersAreSafe = async (req, res, next) => {
     return;
   } else {
     res.setHeader("Content-Type", "application/json");
-    res
-      .status(400)
-      .send(
-        JSON.stringify({
-          message:
-            "Нельзя удалять пользователей или добавлять больше одного пользователя",
-        })
-      );
+    res.status(400).send(
+      JSON.stringify({
+        message:
+          "Нельзя удалять пользователей или добавлять больше одного пользователя",
+      })
+    );
   }
+};
+
+const checkIsVoteRequest = async (req, res, next) => {
+  if (Object.keys(req.body).length === 1 && req.body.users) {
+    req.isVoteRequest = true;
+  }
+  next();
 };
 
 module.exports = {
@@ -120,4 +125,5 @@ module.exports = {
   checkIsGameExists,
   checkIfCategoriesAvaliable,
   checkIfUsersAreSafe,
+  checkIsVoteRequest,
 };
