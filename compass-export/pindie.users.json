@@ -1,60 +1,54 @@
 [{
   "_id": {
-    "$oid": "662a89d242f2c8b827c320ff"
-  },
-  "username": "user",
-  "email": "test@example.com",
-  "password": "password"
-},
-{
-  "_id": {
-    "$oid": "662bae2b0f791cda27b5bbb7"
+    "$oid": "6606b19ef99cd7a67132aaf6"
   },
   "username": "aski",
   "email": "aski@example.com",
-  "password": "ilovehtml"
+  "password": "$2a$10$LgqW2yoQxJ6nDBaS8nfM3urShNcn0m95wgyES2lqLw2kXicCHyfmC",
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "662e80b8909d8c33fcd35fad"
+    "$oid": "6606b3e0ba5b4c3fa4be6dd5"
   },
-  "username": "ilya",
-  "email": "ilya@example.com",
-  "password": "qwerty1234"
+  "username": "Sobaka",
+  "email": "jav@example.com",
+  "password": "$2a$10$g6PgxfOv1p0xVAi1FCckRuolYB5ImwazvVVhNVisaoxDI9NuAE8oi",
+  "__v": 0
 },
 {
   "_id": {
-    "$oid": "663e05cc88cb4334803f8c23"
+    "$oid": "66493e46788cdd16ee0d86c3"
   },
   "username": "cssochka",
   "email": "cssochka@example.com",
-  "password": "ilovecss",
+  "password": "$2a$10$9Jw8cs.U7r5MRVE02qab4.rQot.Vr0Hrbt6kH/jP2DDA0l/st7UB2",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "663e05d688cb4334803f8c27"
-  },
-  "username": "jav-jav",
-  "email": "jav-jav@example.com",
-  "password": "ilovejs",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "663e062388cb4334803f8c2e"
+    "$oid": "66493e7f788cdd16ee0d86cb"
   },
   "username": "admin",
   "email": "admin@example.com",
-  "password": "admin123!",
+  "password": "$2a$10$a5./lzCQVqQwhKxmh1zCi.2y.REiIObknOeRNsXje.PVAogdTByTq",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "6640ee0ba58465017c013bea"
+    "$oid": "66493ead788cdd16ee0d86d2"
   },
-  "username": "usn",
-  "email": "email@gmail.com",
-  "password": "password",
+  "username": "jav-jav",
+  "email": "jav-jav@example.com",
+  "password": "$2a$10$8obq9rO18g.wcH2EtauuG.XZyf9FqwUZ5LLlZ93kvY5xAiQlnJe4G",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664940a1788cdd16ee0d870d"
+  },
+  "username": "Gerardo Vine",
+  "email": "gerardovine2001@example.com",
+  "password": "$2a$10$gyWaQzgxJScA.KxLCpGXgOFffRRsy1OBOvLzhL1TMr9JT.fTKvVnO",
   "__v": 0
 }]
