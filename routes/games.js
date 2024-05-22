@@ -36,7 +36,7 @@ gamesRouter.post(
 gamesRouter.put(
   "/games/:id",
   findGameById,
-  checkIsVoteRequest,
+  // checkIsVoteRequest,
   checkIfUsersAreSafe,
   checkIfCategoriesAvaliable,
   checkEmptyFields,
