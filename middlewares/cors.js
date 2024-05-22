@@ -3,8 +3,8 @@ const allowedCors = [
   "https://pindie1backend.nomoredomainswork.ru",
   "http://pindie1frontend.nomoredomainswork.ru",
   "http://pindie1backend.nomoredomainswork.ru",
-  "http://localhost:3000",
-  "http://localhost:3001",
+  "http://pindie1frontend.nomoredomainswork.ru:443",
+  "http://pindie1backend.nomoredomainswork.ru:443",
   "https://practicum.yandex.ru",
   "https://students-projects.ru",
 ];
