@@ -1,6 +1,6 @@
 const allowedCors = [
-  "https://pindie1frontend.nomoredomainswork.ru",
-  "https://pindie1backend.nomoredomainswork.ru",
+  "https://pindie1frontend.nomoredomainswork.ru:443",
+  "https://pindie1backend.nomoredomainswork.ru:443",
   "http://pindie1frontend.nomoredomainswork.ru",
   "http://pindie1backend.nomoredomainswork.ru",
   "http://pindie1frontend.nomoredomainswork.ru:443",
