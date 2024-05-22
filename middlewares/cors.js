@@ -1,6 +1,8 @@
 const allowedCors = [
   "https://pindie1frontend.nomoredomainswork.ru",
   "https://pindie1backend.nomoredomainswork.ru",
+  "http://pindie1frontend.nomoredomainswork.ru",
+  "http://pindie1backend.nomoredomainswork.ru",
   "https://practicum.yandex.ru",
   "https://students-projects.ru",
 ];
