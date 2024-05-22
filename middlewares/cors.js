@@ -1,6 +1,6 @@
 const allowedCors = [
-  "http://localhost:3000",
-  "http://localhost:3001",
+  "https://pindie1frontend.nomoredomainswork.ru",
+  "https://pindie1backend.nomoredomainswork.ru",
   "https://practicum.yandex.ru",
   "https://students-projects.ru",
 ];
