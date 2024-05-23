@@ -92,6 +92,10 @@ const checkIfCategoriesAvaliable = async (req, res, next) => {
   } else {
     next();
   }
+
+  if (req.isVoteRequest) {
+    next();
+  }
 };
 
 const checkIfUsersAreSafe = async (req, res, next) => {
