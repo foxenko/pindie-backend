@@ -49,6 +49,7 @@ const deleteGame = async (req, res, next) => {
 
 const checkEmptyFields = async (req, res, next) => {
   if (
+    !req.isVoteRequest ||
     !req.body.title ||
     !req.body.description ||
     !req.body.image ||
