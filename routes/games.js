@@ -22,7 +22,7 @@ const { checkAuth } = require("../middlewares/auth");
 const gamesRouter = require("express").Router();
 
 gamesRouter.get("/games", findAllGames, sendAllGames);
-gamesRouter.get("/games/:id", findAllGames, findGameById, sendGameById);
+gamesRouter.get("/games/:id", findGameById, sendGameById);
 gamesRouter.post(
   "/games",
   findAllGames,
