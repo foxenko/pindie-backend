@@ -1,18 +1,17 @@
 const games = require("../models/games");
 
 const findAllGames = async (req, res, next) => {
-  if(req.query["categories.name"]) { 
-    req.gamesArray = await games.findGameByCategory(req.query["categories.name"])
-    next()
-    return
+  if (req.query["categories.name"]) {
+    req.gamesArray = await games.findGameByCategory(
+      req.query["categories.name"]
+    );
+    next();
+    return;
   }
-  req.gamesArray = await games
-    .find({})
-    .populate("categories")
-    .populate({
-      path: "users",
-      select: "-password"
-    })
+  req.gamesArray = await games.find({}).populate("categories").populate({
+    path: "users",
+    select: "-password",
+  });
   next();
 };
 
@@ -21,7 +20,7 @@ const findGameById = async (req, res, next) => {
     req.game = await games.findById(req.params.id);
     next();
   } catch (error) {
-    res.status(404).send({ message: "Game not found" });
+    res.status(404).send({ message: "Игра не найдена" });
   }
 };
 
@@ -32,7 +31,8 @@ const createGame = async (req, res, next) => {
     req.game = await games.create(req.body);
     next();
   } catch (error) {
-    res.status(400).send("Error creating game");
+    res.setHeader("Content-Type", "application/json");
+    res.status(400).send("Ошибка создания игры");
   }
 };
 
@@ -51,7 +51,8 @@ const deleteGame = async (req, res, next) => {
     req.game = await games.findByIdAndDelete(req.params.id);
     next();
   } catch (error) {
-    res.status(400).send({ message: "Error deleting game" });
+    res.setHeader("Content-Type", "application/json");
+    res.status(400).send({ message: "Ошибка удаления игры" });
   }
 };
 
